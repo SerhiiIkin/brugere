@@ -1,0 +1,140 @@
+@import "reset.css";
+
+.brugere {
+    padding-top: 150px;
+    display: grid;
+    row-gap: 150px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-items: center;
+
+    @media (min-width: 1281px) {
+        grid-template-columns: none;
+        justify-items: inherit;
+        row-gap: 20px;
+        padding-top: 20px;
+    }
+}
+
+.bruger {
+    max-width: 340px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #00000029;
+
+    @media (min-width: 1281px) {
+        max-width: 100%;
+        padding: 10px 60px;
+    }
+}
+
+.burger__map {
+    border-radius: 20px 20px 0 0;
+    min-height: 130px;
+
+    @media (min-width: 1281px) {
+        display: none;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.bruger__img {
+    max-width: 160px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 50%;
+    top: -25%;
+    left: 50%;
+    translate: -46% 0;
+
+    @media (min-width: 1281px) {
+        position: inherit;
+        max-width: 90px;
+        max-height: 90px;
+        align-self: center;
+        translate: 0;
+    }
+}
+
+.bruger__wrapper {
+    position: relative;
+
+    @media (min-width: 1281px) {
+        display: flex;
+        position: inherit;
+    }
+}
+
+.bruger__info {
+    padding: 30px 10px;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    h2 {
+        font-family: Bodoni Moda;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-family: Quicksand;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .bruger__website,
+    .bruger__email {
+        font-family: Quicksand;
+    }
+
+    .bruger__email {
+        color: #606060;
+        font-size: 20px;
+    }
+
+    .bruger__website {
+        font-family: Quicksand;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: black;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 30px;
+        align-self: center;
+    }
+
+    @media (min-width: 1281px) {
+        & {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        h3 {
+            grid-column-start: 1;
+        }
+
+        .bruger__email,
+        .bruger__website {
+            grid-row: 1/-1;
+        }
+
+        .bruger__email {
+            grid-column-start: 2;
+        }
+
+        .bruger__website {
+            grid-column-start: 3;
+            justify-self: end;
+        }
+    }
+}

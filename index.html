@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css" />
+        <title></title>
+    </head>
+    <body>
+        <main class="main">
+            <div class="container">
+                <section class="brugere">
+                </section>
+            </div>
+        </main>
+    </body>
+    <template>
+        <article class="bruger">
+            <div class="bruger__wrapper">
+                <div class="burger__map">
+                    <iframe
+                        src="{{map}}"
+                        width="300"
+                        height="200"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <img
+                    class="bruger__img"
+                    src="imgSrc"
+                    alt="imgAlt"
+                />
+                <div class="bruger__info">
+                    <h2>navn</h2>
+                    <h3>login</h3>
+                    <a
+                        class="bruger__email"
+                        href="mailto:{{email}}"
+                        >{{email}}</a
+                    >
+                    <a href="#" class="bruger__website"
+                        >Se Website</a
+                    >
+                </div>
+            </div>
+        </article>
+    </template>
+</html>
